@@ -21,17 +21,11 @@ if (-not $guid) {
   throw "Could not determine MSI ProductCode. PSChildName='$($key.PSChildName)' UninstallString='$($key.UninstallString)'"
 }
 
-$msiArgs = "/x $guid /qn /norestart /l*v `"$env:TEMP\alfen-ace-uninstall.log`""
-
-Write-Host "Uninstalling '$displayName' with: msiexec.exe $msiArgs"
-
-# Direct, no prompts, wait for completion
-$proc = Start-Process -FilePath "$env:SystemRoot\System32\msiexec.exe" -ArgumentList $msiArgs -Wait -PassThru
-
-Write-Host "msiexec exit code: $($proc.ExitCode)"
-
-# MSI "ok" exitcodes
-$ok = @(0, 1605, 1614, 1641, 3010)
-if ($ok -notcontains $proc.ExitCode) {
-  throw "Uninstall failed with exit code $($proc.ExitCode). Check log: $env:TEMP\alfen-ace-uninstall.log"
+$packageArgs = @{
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'MSI'
+  silentArgs     = "/x $guid /qn /norestart"
+  validExitCodes = @(0, 1605, 1614, 1641, 3010)
 }
+
+Install-ChocolateyInstallPackage @packageArgs
