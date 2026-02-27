@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>alfen-ace-service-installer</id>
+    <version>4.2.0</version>
+
+    <!-- Maintainer (jij) -->
+    <owners>NickBoot</owners>
+
+    <!-- Software info -->
+    <title>ACE Service Installer (Install)</title>
+    <authors>Alfen N.V.</authors>
+
+    <!-- Required -->
+    <projectUrl>https://knowledge.alfen.com/space/IN/1627488257/Download+the+ACE+Service+Installer</projectUrl>
+
+    <!-- Strong guideline -->
+    <packageSourceUrl>https://github.com/nickbootone/alfen-ace-service-installer-chocolatey</packageSourceUrl>
+
+    <!-- Guidelines (als je ze kunt vinden, zet ze erbij) -->
+    <!-- <licenseUrl>https://... </licenseUrl> -->
+    <!-- <iconUrl>https://... </iconUrl> -->
+
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <tags>alfen ace service installer ev charger charging station</tags>
+
+    <summary>Installs the Alfen ACE Service Installer for servicing Alfen charging stations.</summary>
+
+    <description>
+### Alfen ACE Service Installer
+
+This package installs **ACE Service Installer** from **Alfen**.  
+ACE Service Installer is used by installers/service engineers to configure and service Alfen EV charging stations (NG platform).
+
+#### Installation
+- Downloads the official vendor MSI
+- Installs silently using MSI (`/qn /norestart`)
+- Verifies the download using a SHA256 checksum
+
+#### Uninstallation
+- Uninstalls silently using MSI (`msiexec /x {ProductCode}`)
+
+Source MSI: https://knowledge.alfen.com/download/attachments/1627488257/ACE%20Service%20Installer%20v4.2.0_416.msi
+    </description>
+
+    <releaseNotes>https://knowledge.alfen.com/space/IN/1627488257/Download+the+ACE+Service+Installer</releaseNotes>
+  </metadata>
+
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
