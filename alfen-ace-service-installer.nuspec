@@ -4,46 +4,48 @@
     <id>alfen-ace-service-installer</id>
     <version>4.2.0</version>
 
-    <!-- Maintainer (jij) -->
-    <owners>NickBoot</owners>
-
-    <!-- Software info -->
     <title>ACE Service Installer (Install)</title>
+
+    <!-- Maintainer (jij) -->
+    <owners>nickboot</owners>
+
+    <!-- Software vendor -->
     <authors>Alfen N.V.</authors>
 
-    <!-- Required -->
+    <!-- Required for community feed -->
     <projectUrl>https://knowledge.alfen.com/space/IN/1627488257/Download+the+ACE+Service+Installer</projectUrl>
 
     <!-- Strong guideline -->
-    <packageSourceUrl>https://github.com/nickbootone/alfen-ace-service-installer-chocolatey</packageSourceUrl>
+    <packageSourceUrl>https://github.com/NickBootOne/alfen-ace-service-installer-chocolatey</packageSourceUrl>
 
-    <!-- Guidelines (als je ze kunt vinden, zet ze erbij) -->
-    <!-- <licenseUrl>https://... </licenseUrl> -->
-    <!-- <iconUrl>https://... </iconUrl> -->
+    <!-- Icon (use CDN, not github blob/raw) -->
+    <iconUrl>https://cdn.statically.io/gh/NickBootOne/alfen-ace-service-installer-chocolatey/975a1a49ba776ee368bf1da89d4c1e51c58076a4/icon/Alfen-Ace-icon.png</iconUrl>
 
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
     <tags>alfen ace service installer ev charger charging station</tags>
 
-    <summary>Installs the Alfen ACE Service Installer for servicing Alfen charging stations.</summary>
+    <summary>Installs the Alfen ACE Service Installer (Windows) used to configure and troubleshoot Alfen chargers.</summary>
 
-    <description>
+    <description><![CDATA[
 ### Alfen ACE Service Installer
 
-This package installs **ACE Service Installer** from **Alfen**.  
-ACE Service Installer is used by installers/service engineers to configure and service Alfen EV charging stations (NG platform).
+This package installs the **Alfen ACE Service Installer** for Windows.
+ACE Service Installer is used by installers/service engineers to **configure and troubleshoot Alfen EV charging stations on location** (NG platform).
 
-#### Installation
+#### Package behavior
 - Downloads the official vendor MSI
 - Installs silently using MSI (`/qn /norestart`)
-- Verifies the download using a SHA256 checksum
+- Validates the download with a SHA256 checksum (set in chocolateyinstall.ps1)
 
-#### Uninstallation
-- Uninstalls silently using MSI (`msiexec /x {ProductCode}`)
+#### Notes
+The software may require Alfen credentials and/or appropriate permissions depending on your environment and charger configuration.
 
-Source MSI: https://knowledge.alfen.com/download/attachments/1627488257/ACE%20Service%20Installer%20v4.2.0_416.msi
-    </description>
+Vendor page:
+https://knowledge.alfen.com/space/IN/1627488257/Download+the+ACE+Service+Installer
+]]></description>
 
+    <!-- Guideline: URL is OK -->
     <releaseNotes>https://knowledge.alfen.com/space/IN/1627488257/Download+the+ACE+Service+Installer</releaseNotes>
   </metadata>
 
