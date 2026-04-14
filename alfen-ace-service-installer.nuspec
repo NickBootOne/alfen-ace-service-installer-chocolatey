@@ -17,6 +17,8 @@
 
     <!-- Strong guideline -->
     <packageSourceUrl>https://github.com/NickBootOne/alfen-ace-service-installer-chocolatey</packageSourceUrl>
+    <docsUrl>https://knowledge.alfen.com/space/IN/1627488257/Download+the+ACE+Service+Installer</docsUrl>
+    <bugTrackerUrl>https://github.com/NickBootOne/alfen-ace-service-installer-chocolatey/issues</bugTrackerUrl>
 
     <!-- Icon (use CDN, not github blob/raw) -->
     <iconUrl>https://cdn.statically.io/gh/NickBootOne/alfen-ace-service-installer-chocolatey/975a1a49ba776ee368bf1da89d4c1e51c58076a4/icon/Alfen-Ace-icon.png</iconUrl>
